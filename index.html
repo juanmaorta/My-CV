@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title></title>
+	<script language="Javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script language="Javascript" src="./app/cv_class.js" ></script>
+	<script language="Javascript" src="./app/mycv.json.js" ></script>
+	<script language="Javascript" src="./app/app.js" ></script>
+	<style type="text/css">
+	body {font-family: Courier; font-size: 14px; margin: 2em; background-color: #333; color: #ccc;}
+	p {margin: .2em 0;}
+	a {color: red; text-decoration: none;}
+	h2 {font-weight: normal; margin: 0 0 1em 0; color: #fff;}
+
+	.menu {list-style: none; margin: 0; padding: 0; color: black; width: 300px; float: left;}
+	.menu a {color: inherit;}
+	.menu a:hover {color: white;}
+	#display_info {width: 450px; float: left;}
+	</style>
+</head>
+<body>
+
+<ul class="menu">
+	<li><a href="#" title="personal">Personal info</a></li>
+	<li><a href="#" title="academic">Academic</a></li>
+	<li><a href="#" title="professional">Professional</a></li>
+	<li><a href="#" title="tech">Technical Skills</a></li>
+	<li><a href="#" title="projects">My projects</a></li>
+</ul>
+<div id="display_info">
+
+</div>
+
+<script>
+$(document).ready(function(){
+   	$cont = $("#display_info");
+
+	$(".menu a").click(function () {
+		switch($(this).attr("title")) {
+			case "personal":
+				showPersonal($cont, mycv);
+				break;
+			case "academic":
+				showAcademic($cont, mycv);
+				break;
+			case "professional":
+				showProfessional($cont, mycv);
+				break;
+			case "tech":
+				showTech($cont, mycv);
+				break;
+			case "projects":
+				showProjects($cont, mycv);
+				break;
+		}
+	});
+	// shows default content
+	showPersonal($cont, mycv);
+ });
+</script>
+</body>
+</html>
