@@ -102,6 +102,16 @@ $(document).ready(function(){
 
 <script id="professional_info" type="text/template">
 	<h2>Professional info</h2>
+	<ul>
+		{{#prof_experience}}
+		<li>
+			<p><strong>{{company}}</strong></p>
+			<p>{{position}}</p>
+			<p>{{period}}</p>
+			<p class="desc">{{description}}</p>
+		</li>
+		{{/prof_experience}}
+	</ul>
 </script>
 
 <script id="project_info" type="text/template">

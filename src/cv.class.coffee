@@ -64,6 +64,12 @@ class Candidate
 					obj = new Language(language)
 					@addLanguage(obj)
 
+			# professional experience
+			if json.professional_experience? and json.professional_experience.length > 0
+				for exp in json.professional_experience
+					obj = new Experience(exp)
+					@addExperience(obj)
+
 			# console.log
 		else
 			alert "No JSON file provided"
@@ -139,7 +145,7 @@ class Candidate
 		return false
 
 	addExperience: (experience) ->
-		@prof_experiencie.push(experience)
+		@prof_experience.push(experience)
 		return false
 
 	###
@@ -210,8 +216,11 @@ class Experience
 	company = ''
 	description = ''
 
-	constructor: (@period, @position, @company, @description) ->
-
+	constructor: (obj) ->
+		@period = obj.period
+		@position = obj.position
+		@company = obj.company
+		@description = obj.description
 
 
 ###
