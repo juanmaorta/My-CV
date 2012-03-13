@@ -2,20 +2,28 @@
 <head>
 	<title></title>
 	<script language="Javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script language="Javascript" src="./libs/mustache.js"></script>
 	<script language="Javascript" src="./app/cv.class.js" ></script>
 	<script language="Javascript" src="./app/mycv.json.js" ></script>
 	<script language="Javascript" src="./app/app.js" ></script>
 	<style type="text/css">
-	body {font-family: Courier; font-size: 14px; margin: 2em; background-color: #333; color: #ccc;}
-	p {margin: .2em 0;}
+	body {font-family: "Andale Mono", "Courier new", Courier; font-size: 14px; margin: 2em; background-color: #fff; color: #666;}
+	p {margin: .2em 0; line-height: 1.4em;}
+	p strong {font-weight: normal; color: #000;}
 	a {color: red; text-decoration: none;}
-	h2 {font-weight: normal; margin: 0 0 1em 0; color: #fff;}
+	a:hover {color: blue;}
+	h2 {font-weight: normal; margin: 0 0 1em 0; color: #333;}
 
-	.menu {list-style: none; margin: 0; padding: 0; color: black; width: 300px; float: left;}
+	ul {list-style: none; margin: 0; padding: 0;}
+
+	.menu {color: green; width: 300px; float: left;}
 	.menu li {margin: .2em 0;}
 	.menu a {color: inherit;}
-	.menu a:hover {color: white;}
-	#display_info {width: 450px; float: left;}
+	.menu a:hover {color: #000;}
+
+
+	#display_info {width: 550px; float: left; margin-left: 50px;}
+	img#cand_photo {float: right;}
 	</style>
 </head>
 <body>
@@ -38,28 +46,66 @@ $(document).ready(function(){
 	$(".menu a").click(function () {
 		switch($(this).attr("title")) {
 			case "personal":
-				displayPersonalInfo($cont, mycv);
+				displayPersonalInfo($cont, candidate);
 				break;
 			case "academic":
-				displayAcademicInfo($cont, mycv);
+				displayAcademicInfo($cont, candidate);
 				break;
 			case "professional":
-				displayProfesionalInfo($cont, mycv);
+				displayProfesionalInfo($cont, candidate);
 				break;
 			case "tech":
-				displayTechnicalSkills($cont, mycv);
+				displayTechnicalSkills($cont, candidate);
 				break;
 			case "projects":
-				displayProjects($cont, mycv);
+				displayProjects($cont, candidate);
 				break;
 		}
 	});
-	
-	console.log(candidate.getFullName());
-	console.log(candidate.getAge());
+
 	// shows default content
 	displayPersonalInfo($cont, candidate);
  });
+</script>
+
+<!-- Mustache templates -->
+<!-- Personal info -->
+<script id="personal_info" type="text/template">
+	{{#photo}}<img src="{{photo}}" alt="{{name}}'s photo" id="cand_photo"/>{{/photo}}
+	<h2>{{name}} {{surname}}</h2>
+	<p>{{gender}}, {{age}}</p>
+	<p><strong>I live in</strong> {{city_of_residence}} - {{country_of_residence}}</p>
+	
+	
+	<p><a href="mailto:{{email}}">{{email}}</a></p>
+	<p>{{mobile}}</p>
+
+	{{#web}}<p><a href="{{web}}" target="_blank">My personal website</a></p>{{/web}}
+	<h3>Social URLs</h3>
+	<ul>{{#other_urls}}<li><a href="{{url}}" target="_blank">{{name}}</a></li>{{/other_urls}}</ul>
+</script>
+
+<script id="academic_info" type="text/template">
+	<h2>Academic info</h2>
+	<ul>{{#studies}}<li><strong>{{title}}</strong><p><em>{{period}}</em></p><p>{{center}}</p><p>{{city}}</p></li>{{/studies}}</ul>
+	<h3>Languages</h3>
+	<ul>
+	{{#languages}}
+	<li>{{lang_name}} - {{level}}</li>
+	{{/languages}}
+	</ul>
+</script>
+
+<script id="technical_skill_info" type="text/template">
+	<h2>Technical skills</h2>
+</script>
+
+<script id="professional_info" type="text/template">
+	<h2>Professional info</h2>
+</script>
+
+<script id="project_info" type="text/template">
+	<h2>My projects</h2>
 </script>
 </body>
 </html>

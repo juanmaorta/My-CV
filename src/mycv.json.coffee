@@ -16,7 +16,7 @@ mycv =
 		country_of_birth: "Spain"
 		city_of_residence: "Barcelona"
 		country_of_residence: "Spain"
-		photo: "http://www.juanmaorta.com/imgs/myphoto.jpg"
+		photo: "http://www.juanmaorta.com/gallery/juanmaorta/12335190Xm_sm.jpg"
 
 
 	contact_info:
@@ -32,18 +32,21 @@ mycv =
 		,
 			name: "github"
 			url: "https://github.com/juanmaorta"
+		,
+			name: "facebook"
+			url: "http://www.facebook.com/juanma.orta"
 		]
 
 	studies: [
 		title: "Degree in Biology"
-		center: "UAB"
+		center: "Universitat Autonoma de Barcelona"
 		period:	"1988-1993"
-		city:	"Barcelona"
+		city:	"Barcelona (Spain)"
 	,
 		title: "Software Architecture"
-		center: "UOC"
+		center: "Universitat Oberta de Catalunya"
 		period:	"2003-2005"
-		city:	"remote"
+		city:	"Non presential"
 	]
 
 

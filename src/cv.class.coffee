@@ -8,6 +8,7 @@ class Candidate
 	city_of_residence = ''
 	country_of_residence = ''
 	photo = ''
+	age = 0
 
 	email = ''
 	mobile =''
@@ -38,6 +39,7 @@ class Candidate
 				for key, value of json.personal_data
 					if key is "birth_date"
 						@birth_date = new Date(value)
+						@setAge()
 					else
 						@[key] = value
 			
@@ -56,7 +58,13 @@ class Candidate
 					obj = new Study(study)
 					@addStudy(obj)
 
-			# console.log @
+			# load languages
+			if json.languages? and json.languages.length > 0
+				for language in json.languages
+					obj = new Language(language)
+					@addLanguage(obj)
+
+			# console.log
 		else
 			alert "No JSON file provided"
 
@@ -80,7 +88,7 @@ class Candidate
 	getFullName: ->
 		return "#{@name} #{@surname}"
 
-	getAge: ->
+	calcAge: ->
 		if @birth_date?
 			today = new Date()
 			age = today.getFullYear() - @birth_date.getFullYear()
@@ -90,13 +98,17 @@ class Candidate
 				age = age - 1
 			return age
 
+	setAge: (birth) ->
+		@age = @calcAge()
+
+	###
 	getBirthInfo: ->
 		info = "Born in #{@city_of_birth}, #{@country_of_birth} in #{@birth_date.getFullYear()}."
 		if @gender is "female"
 			info += " She "
 		else
 			info += " He "
-		info += "is #{@getAge()}."
+		info += "is #{@calcAge()}."
 		return info
 
 	getResidence: ->
@@ -112,6 +124,7 @@ class Candidate
 			return info
 		else
 			return ""
+	###
 
 
 	addUrl: (url) ->
@@ -119,6 +132,10 @@ class Candidate
 
 	addStudy: (study) ->
 		@studies.push(study)
+		return false
+
+	addLanguage: (lang) ->
+		@languages.push(lang)
 		return false
 
 	addExperience: (experience) ->
@@ -179,6 +196,14 @@ class Study
 		@period = obj.period 
 		@city = obj.city
 
+class Language
+	lang_name = ''
+	level = ''
+
+	constructor: (obj) ->
+		@lang_name = obj.lang_name
+		@level = obj.level
+
 class Experience
 	period = ''
 	position = ''
@@ -186,6 +211,8 @@ class Experience
 	description = ''
 
 	constructor: (@period, @position, @company, @description) ->
+
+
 
 ###
 class Skill

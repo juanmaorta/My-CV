@@ -4,19 +4,18 @@ candidate.loadJSON(mycv)
 
 displayPersonalInfo = (el, cand) ->
 	if el? and cand?
-		el.html ""
-		###
-		el.append "<h2>Personal info</h2>"
-		el.append "<p>#{cand.getFullName()}</p>"
-		el.append("<p>" + cand.getBirthInfo() + "</p>")
-		el.append("<p>" + cand.getResidence() + "</p>")
-		el.append("<p><a href=\"mailto:"+ cand.getEmail()+"\">" + cand.getEmail() + "</a></p>")
-		el.append("<p>" + cand.getMobile() + "</p>")
-		###
+		template = $("#personal_info").html()
+		# console.log template
+		html = Mustache.to_html(template, cand)
+		el.html html
 
 displayAcademicInfo = (el, cand) ->
 	if el? and cand?
-		el.html ""
+		template = $("#academic_info").html()
+		# console.log template
+		html = Mustache.to_html(template, cand)
+		el.html html
+		###
 		el.append "<h2>Academic info</h2>"
 
 		studies = cand.getStudies()
@@ -24,39 +23,30 @@ displayAcademicInfo = (el, cand) ->
 			el.append "<h3>#{acad.center} - #{acad.getYear()}</h3>"
 			el.append "<p>#{acad.title}</p>"
 			el.append "<p></p>"
-
+		###
 displayProfesionalInfo = (el, cand) ->
 	if el? and cand?
-		el.html ""
-		el.append "<h2>Professional info</h2>"
+		template = $("#professional_info").html()
+		# console.log template
+		html = Mustache.to_html(template, cand)
+		el.html html
 
-		exp = cand.getExperience()
-		if exp?
-			el.append "<p>#{exp.length()}</p>"
-		else
-			el.append "<p>Sorry, but #{cand.getName()} has no experience</p>"
 
 displayTechnicalSkills = (el, cand) ->
 	if el? and cand?
-		el.html ""
-		el.append "<h2>Technical skills</h2>"
-		
-		items = cand.getSkills()
-		if items?
-			el.append "<p>#{items.length()}</p>"
-		else
-			el.append "<p>Sorry, but #{cand.getName()} has no technical skills</p>"
+		template = $("#technical_skill_info").html()
+		# console.log template
+		html = Mustache.to_html(template, cand)
+		el.html html
+
 
 displayProjects = (el, cand) ->
 	if el? and cand?
-		el.html ""
-		el.append "<h2>My Projects</h2>"
+		template = $("#project_info").html()
+		# console.log template
+		html = Mustache.to_html(template, cand)
+		el.html html
 
-		items = cand.getProjects()
-		if items?
-			el.append "<p>#{items.length()}</p>"
-		else
-			el.append "<p>Sorry, but #{cand.getName()} has no projects</p>"
 
 ###
 mycand = new Candidate(
