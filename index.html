@@ -2,7 +2,7 @@
 <head>
 	<title></title>
 	<script language="Javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script language="Javascript" src="./app/cv_class.js" ></script>
+	<script language="Javascript" src="./app/cv.class.js" ></script>
 	<script language="Javascript" src="./app/mycv.json.js" ></script>
 	<script language="Javascript" src="./app/app.js" ></script>
 	<style type="text/css">
@@ -12,6 +12,7 @@
 	h2 {font-weight: normal; margin: 0 0 1em 0; color: #fff;}
 
 	.menu {list-style: none; margin: 0; padding: 0; color: black; width: 300px; float: left;}
+	.menu li {margin: .2em 0;}
 	.menu a {color: inherit;}
 	.menu a:hover {color: white;}
 	#display_info {width: 450px; float: left;}
@@ -20,11 +21,11 @@
 <body>
 
 <ul class="menu">
-	<li><a href="#" title="personal">Personal info</a></li>
-	<li><a href="#" title="academic">Academic</a></li>
-	<li><a href="#" title="professional">Professional</a></li>
-	<li><a href="#" title="tech">Technical Skills</a></li>
-	<li><a href="#" title="projects">My projects</a></li>
+	<li><a href="#" title="personal">.displayPersonalInfo()</a></li>
+	<li><a href="#" title="academic">.displayAcademicInfo()</a></li>
+	<li><a href="#" title="professional">.displayProfesionalInfo()</a></li>
+	<li><a href="#" title="tech">.displayTechnicalSkills()</a></li>
+	<li><a href="#" title="projects">.displayProjects()</a></li>
 </ul>
 <div id="display_info">
 
@@ -33,28 +34,31 @@
 <script>
 $(document).ready(function(){
    	$cont = $("#display_info");
-
+   	
 	$(".menu a").click(function () {
 		switch($(this).attr("title")) {
 			case "personal":
-				showPersonal($cont, mycv);
+				displayPersonalInfo($cont, mycv);
 				break;
 			case "academic":
-				showAcademic($cont, mycv);
+				displayAcademicInfo($cont, mycv);
 				break;
 			case "professional":
-				showProfessional($cont, mycv);
+				displayProfesionalInfo($cont, mycv);
 				break;
 			case "tech":
-				showTech($cont, mycv);
+				displayTechnicalSkills($cont, mycv);
 				break;
 			case "projects":
-				showProjects($cont, mycv);
+				displayProjects($cont, mycv);
 				break;
 		}
 	});
+	
+	console.log(candidate.getFullName());
+	console.log(candidate.getAge());
 	// shows default content
-	showPersonal($cont, mycv);
+	displayPersonalInfo($cont, candidate);
  });
 </script>
 </body>

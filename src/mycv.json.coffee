@@ -10,22 +10,29 @@ mycv =
 	personal_data:
 		name: 	"Juanma"
 		surname: "Orta"
+		gender: "male"
 		birth_date: "1969-10-10"
 		city_of_birth: "Terrassa, Barcelona"
 		country_of_birth: "Spain"
-		city_of_residende: "Barcelona"
+		city_of_residence: "Barcelona"
 		country_of_residence: "Spain"
 		photo: "http://www.juanmaorta.com/imgs/myphoto.jpg"
 
 
 	contact_info:
 		email: "juanma.orta@gmail.com"
-		phone: "+34 629 519 854"
+		mobile: "+34 629 519 854"
 		web: "http://www.juanmaorta.com"
-		linkedin: "http://es.linkedin.com/in/juanmaorta"
-		twitter: "http://twitter.com/#!/JuanmaOrta"
-		github: "https://github.com/juanmaorta"
-
+		other_urls: [
+			name: "linkedin"
+			url: "http://es.linkedin.com/in/juanmaorta"
+		,
+			name: "twitter"
+			url: "http://twitter.com/#!/JuanmaOrta"
+		,
+			name: "github"
+			url: "https://github.com/juanmaorta"
+		]
 
 	studies: [
 		title: "Degree in Biology"
@@ -58,17 +65,17 @@ mycv =
 		period: "2006 - present"
 		company: "Use Your Time SL"
 		position: "CTO"
-		duties: ""
+		description: ""
 	,
 		period: "2000 - present"
 		company: "Ameba Interactiva SL"
 		position: "Founder and main developper"
-		duties: ""
+		description: ""
 	,
 		period: "2005 - present"
 		company: "Portafolionline"
 		position: "Founder and main developper"
-		duties: ""
+		description: ""
 	]
 
 	tech_skills: []
