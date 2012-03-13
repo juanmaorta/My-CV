@@ -21,6 +21,11 @@
 	.menu a {color: inherit;}
 	.menu a:hover {color: #000;}
 
+	ul.itemlist li {margin-bottom: 3em;}
+	ul.enum {padding-left: 1em; list-style-type:square}
+
+	p.desc {font-size: .9em;}
+
 
 	#display_info {width: 550px; float: left; margin-left: 50px;}
 	img#cand_photo {float: right;}
@@ -82,14 +87,14 @@ $(document).ready(function(){
 
 	{{#web}}<p><a href="{{web}}" target="_blank">My personal website</a></p>{{/web}}
 	<h3>Social URLs</h3>
-	<ul>{{#other_urls}}<li><a href="{{url}}" target="_blank">{{name}}</a></li>{{/other_urls}}</ul>
+	<ul class="enum">{{#other_urls}}<li><a href="{{url}}" target="_blank">{{name}}</a></li>{{/other_urls}}</ul>
 </script>
 
 <script id="academic_info" type="text/template">
 	<h2>Academic info</h2>
 	<ul>{{#studies}}<li><strong>{{title}}</strong><p><em>{{period}}</em></p><p>{{center}}</p><p>{{city}}</p></li>{{/studies}}</ul>
 	<h3>Languages</h3>
-	<ul>
+	<ul class="enum">
 	{{#languages}}
 	<li>{{lang_name}} - {{level}}</li>
 	{{/languages}}
@@ -98,11 +103,16 @@ $(document).ready(function(){
 
 <script id="technical_skill_info" type="text/template">
 	<h2>Technical skills</h2>
+	<ul class="enum">
+	{{#tech_skills}}
+		<li>{{.}}</li>
+	{{/tech_skills}}
+	</ul>
 </script>
 
 <script id="professional_info" type="text/template">
 	<h2>Professional info</h2>
-	<ul>
+	<ul class="itemlist">
 		{{#prof_experience}}
 		<li>
 			<p><strong>{{company}}</strong></p>
@@ -116,6 +126,15 @@ $(document).ready(function(){
 
 <script id="project_info" type="text/template">
 	<h2>My projects</h2>
+	<ul class="itemlist">
+	{{#projects}}
+	<li>
+		<a href="{{url}}" target="_blank"><strong>{{name}}</strong></a>
+		{{#duties}}<p>{{duties}}</p>{{/duties}}
+		{{#description}}<p class="desc">{{description}}</p>{{/description}}
+	</li>
+	{{/projects}}
+	</ul>
 </script>
 </body>
 </html>

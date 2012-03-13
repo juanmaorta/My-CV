@@ -70,7 +70,15 @@ class Candidate
 					obj = new Experience(exp)
 					@addExperience(obj)
 
-			# console.log
+			if json.tech_skills? and json.tech_skills.length > 0
+				@tech_skills = json.tech_skills
+
+			if json.projects? and json.projects.length > 0
+				for proj in json.projects
+					obj = new Project(proj)
+					@addProject(obj)
+
+			console.log @
 		else
 			alert "No JSON file provided"
 
@@ -148,6 +156,10 @@ class Candidate
 		@prof_experience.push(experience)
 		return false
 
+	addProject: (project) ->
+		@projects.push(project)
+		return false
+
 	###
 	addSkill: (skill) ->
 		@skills.push(skill)
@@ -221,6 +233,18 @@ class Experience
 		@position = obj.position
 		@company = obj.company
 		@description = obj.description
+
+class Project
+	name = ''
+	url = ''
+	description = ''
+	duties = ''
+
+	constructor: (obj) ->
+		@name = obj.name
+		@url = obj.url
+		@description = obj.description
+		@duties = obj.duties
 
 
 ###

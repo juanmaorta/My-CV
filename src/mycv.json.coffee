@@ -81,22 +81,29 @@ mycv =
 		description: ""
 	]
 
-	tech_skills: []
+	tech_skills: [
+		"PHP"
+		"Javascript"
+		"Coffeescript"
+		"CSS"
+		"SASS/SCSS"
+		"Java"
+		"Actionscript"
+		"git"
+		"Subversion"
+	]
 
 	personal_skills: []
 
 	projects: [
 		name: "Fotonatura.org"
 		url: "http://www.fotonatura.org"
-		description: ""
-		duties: ""
-		comments: ""
+		duties: "Main developper"
+		description: "Vestibulum lobortis arcu et diam posuere sodales. Duis et lorem sed dolor venenatis blandit eget in purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam eget placerat orci. Pellentesque risus tellus, imperdiet eu hendrerit in, viverra eget neque. Pellentesque fermentum quam imperdiet elit ultricies vitae dignissim tortor interdum."
 	,
 		name: "Azafatayspromotoras.com"
 		url: "http://www.azafatasypromotoras.com"
-		description: ""
+		description: "Dolor sit amet"
 		duties: ""
-		comments: ""
-
 	]
 
