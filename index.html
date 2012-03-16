@@ -6,7 +6,8 @@
 	<script language="Javascript" src="./app/cv.class.js" ></script>
 	<script language="Javascript" src="./app/mycv.json.js" ></script>
 	<script language="Javascript" src="./app/app.js" ></script>
-	<link href="./css/main.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="./css/main.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="./css/print.css" rel="stylesheet" type="text/css" media="print" />
 </head>
 <body>
 <div id="wrapper">
@@ -17,13 +18,11 @@
 		<li><a href="#" title="tech">.displayTechnicalSkills()</a></li>
 		<li><a href="#" title="projects">.displayProjects()</a></li>
 	</ul>
-	<div id="display_info">
-
-	</div>
-	<div id="id_info_cont">
-
-	</div>
-	<div style="clear: both;"></div>
+	<div id="display_info"></div>
+	<div id="id_info_cont"></div>
+</div>
+<div id="footer">
+	<a href="javascript:;" class="print">Printer friendly version</a>
 </div>
 
 <script>
@@ -55,6 +54,20 @@ $(document).ready(function(){
 	displayIdInfo($idcont, candidate);
 	// shows default content
 	displayPersonalInfo($maincont, candidate);
+
+	// print
+	$("#footer").click(function () {
+		$('body').css("background-color", "#fff");
+		$(".print").hide();
+		var append = true;
+
+		displayPersonalInfo($maincont, candidate);
+		displayAcademicInfo($maincont, candidate, append);
+		displayProfesionalInfo($maincont, candidate, append);
+		displayTechnicalSkills($maincont, candidate, append);
+		displayProjects($maincont, candidate, append);
+		window.print();
+	});
  });
 </script>
 
@@ -66,7 +79,7 @@ $(document).ready(function(){
 </script>
 
 <script id="personal_info" type="text/template">
-	<h2>Personal info</h2>
+	<h2 class="first">Personal info</h2>
 	<p>{{name}} {{surname}}</p>
 	<p>{{gender}}, {{age}}</p>
 	<p><strong>I live in</strong> {{city_of_residence}} - {{country_of_residence}}</p>

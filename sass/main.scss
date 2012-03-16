@@ -1,3 +1,6 @@
+@import "compass/css3";
+@import "compass/utilities/lists/bullets";
+
 $bg_color: #dedede;
 $txt_color: #666;
 $title_color: #333;
@@ -65,9 +68,17 @@ ul {
 	}
 }
 
+
+.print {
+	background:url('../img/printer.png') no-repeat 0 0;
+	padding: 0 0 0 2em;
+	@include text-shadow(#fff, 1px, 1px, 1px);
+}
+
 ul.enum {
 	padding-left: 1.1em;
-	list-style-type:square; 
+	/* list-style-type:square; */
+	list-style-image:url('../img/bullet.png');
 	li { margin-bottom: .25em; } }
 
 p.desc {
@@ -107,6 +118,13 @@ p.desc {
 	@media screen and (max-width: 480px) {
 		display: none; 
 	}
+	h2 {margin-top: 0;}
 }
 
+#footer {
+	width: 90%;
+	clear: both;
+	margin: 1% auto;
+	text-align: center;
+}
 
