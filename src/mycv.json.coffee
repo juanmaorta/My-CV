@@ -68,7 +68,7 @@ mycv =
 		period: "2006 - present"
 		company: "Use Your Time SL"
 		position: "CTO"
-		description: ""
+		description: "Duis et lorem sed dolor venenatis blandit eget in purus. Pellentesque habitant morbi tristique"
 	,
 		period: "2000 - present"
 		company: "Ameba Interactiva SL"
@@ -78,7 +78,7 @@ mycv =
 		period: "2005 - present"
 		company: "Portafolionline"
 		position: "Founder and main developper"
-		description: ""
+		description: "Lorem ipsum, Duis et lorem sed dolor venenatis blandit eget in purus."
 	]
 
 	tech_skills: [
@@ -103,6 +103,11 @@ mycv =
 	,
 		name: "Azafatayspromotoras.com"
 		url: "http://www.azafatasypromotoras.com"
+		description: "Dolor sit amet"
+		duties: ""
+	,
+		name: "This very CV"
+		url: ""
 		description: "Dolor sit amet"
 		duties: ""
 	]

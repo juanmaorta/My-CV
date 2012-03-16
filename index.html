@@ -12,7 +12,7 @@
 	p strong {font-weight: normal; color: #000;}
 	a {color: red; text-decoration: none;}
 	a:hover {color: blue;}
-	h2 {font-weight: normal; margin: 0 0 1em 0; color: #333;}
+	h2, h3 {font-weight: normal; margin: 1em 0; color: #333;}
 
 	ul {list-style: none; margin: 0; padding: 0;}
 
@@ -24,7 +24,7 @@
 	ul.itemlist li {margin-bottom: 3em;}
 	ul.enum {padding-left: 1em; list-style-type:square}
 
-	p.desc {font-size: .9em;}
+	p.desc {font-size: .9em; margin-top: 1em;}
 
 
 	#display_info {width: 550px; float: left; margin-left: 50px;}
@@ -81,11 +81,13 @@ $(document).ready(function(){
 	<p>{{gender}}, {{age}}</p>
 	<p><strong>I live in</strong> {{city_of_residence}} - {{country_of_residence}}</p>
 	
-	
-	<p><a href="mailto:{{email}}">{{email}}</a></p>
-	<p>{{mobile}}</p>
+	<div style="margin-top: 1em;">
+	<p>I invite you to...
+	<p>say hello: <a href="mailto:{{email}}">{{email}}</a></p>
+	<p>call me: {{mobile}}</p>
+	{{#web}}<p>or visite my <a href="{{web}}" target="_blank">personal website</a></p>{{/web}}
+	</div>
 
-	{{#web}}<p><a href="{{web}}" target="_blank">My personal website</a></p>{{/web}}
 	<h3>Social URLs</h3>
 	<ul class="enum">{{#other_urls}}<li><a href="{{url}}" target="_blank">{{name}}</a></li>{{/other_urls}}</ul>
 </script>
@@ -115,10 +117,10 @@ $(document).ready(function(){
 	<ul class="itemlist">
 		{{#prof_experience}}
 		<li>
-			<p><strong>{{company}}</strong></p>
+			<h3>{{company}}</strong></h3>
 			<p>{{position}}</p>
 			<p>{{period}}</p>
-			<p class="desc">{{description}}</p>
+			{{#description}}<p class="desc">{{description}}</p>{{/description}}
 		</li>
 		{{/prof_experience}}
 	</ul>

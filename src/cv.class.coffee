@@ -78,7 +78,7 @@ class Candidate
 					obj = new Project(proj)
 					@addProject(obj)
 
-			console.log @
+			# console.log @
 		else
 			alert "No JSON file provided"
 
@@ -115,32 +115,6 @@ class Candidate
 	setAge: (birth) ->
 		@age = @calcAge()
 
-	###
-	getBirthInfo: ->
-		info = "Born in #{@city_of_birth}, #{@country_of_birth} in #{@birth_date.getFullYear()}."
-		if @gender is "female"
-			info += " She "
-		else
-			info += " He "
-		info += "is #{@calcAge()}."
-		return info
-
-	getResidence: ->
-		info = 'Lives in'
-		if @city_of_residence isnt ''
-			info += " #{@city_of_residence}"
-		if @city_of_residence isnt '' and @country_of_residence isnt ''
-			info += ", #{@country_of_residence}"
-		else
-			info += " #{@country_of_residence}"
-		
-		if info isnt 'Lives in'
-			return info
-		else
-			return ""
-	###
-
-
 	addUrl: (url) ->
 		@other_urls.push(url)
 
@@ -160,13 +134,6 @@ class Candidate
 		@projects.push(project)
 		return false
 
-	###
-	addSkill: (skill) ->
-		@skills.push(skill)
-		return false
-	###
-
-
 	getStudies: ->
 		if @studies.length <= 0
 			return null
@@ -180,13 +147,6 @@ class Candidate
 		else
 			return @prof_experience
 
-	###
-	getSkills: ->
-		if @skills.length <= 0
-			return null
-		else
-			return @skills
-	###
 
 	getProjects: ->
 		if @projects.length <= 0
@@ -246,11 +206,3 @@ class Project
 		@description = obj.description
 		@duties = obj.duties
 
-
-###
-class Skill
-	title = ''
-	description = null
-
-	constructor: (@title, @description = '') ->
-###
