@@ -12,17 +12,19 @@
 <body>
 <div id="wrapper">
 	<ul id="menu">
-		<li><a href="#" title="personal">.displayPersonalInfo()</a></li>
-		<li><a href="#" title="academic">.displayAcademicInfo()</a></li>
-		<li><a href="#" title="professional">.displayProfesionalInfo()</a></li>
-		<li><a href="#" title="tech">.displayTechnicalSkills()</a></li>
-		<li><a href="#" title="projects">.displayProjects()</a></li>
+		<li><a href="#personal_info" title="personal">.displayPersonalInfo()</a></li>
+		<li><a href="#academic_info" title="academic">.displayAcademicInfo()</a></li>
+		<li><a href="#technical_skill_info" title="professional">.displayProfesionalInfo()</a></li>
+		<li><a href="#professional_info" title="tech">.displayTechnicalSkills()</a></li>
+		<li><a href="#project_info" title="projects">.displayProjects()</a></li>
 	</ul>
 	<div id="display_info"></div>
 	<div id="id_info_cont"></div>
 </div>
 <div id="footer">
 	<a href="javascript:;" class="print">Printer friendly version</a>
+	<p>This CV is also a proof of concept of some front-end development skills: <strong>HTML, Javascript, CSS</strong>, (and <strong>CoffeeScript/SASS</strong> as well) and <strong>responsive layout</strong>.</p>
+	<p>The <strong>full source code</strong> of the interactive version is available at <a href="https://github.com/juanmaorta/My-CV" target="_blank">GitHub</a></p>
 </div>
 
 <script>
@@ -79,16 +81,17 @@ $(document).ready(function(){
 </script>
 
 <script id="personal_info" type="text/template">
-	<h2 class="first">Personal info</h2>
+	<h2 class="first"><a name="personal_info">Personal info</a></h2>
+	
 	<p>{{name}} {{surname}}</p>
 	<p>{{gender}}, {{age}}</p>
 	<p><strong>I live in</strong> {{city_of_residence}} - {{country_of_residence}}</p>
 	
 	<div style="margin: 1.5em 0;">
-	<p>I invite you to...
+	<p style="margin-bottom: 1em;">I invite you to...</p>
 	<p>say hello: <a href="mailto:{{email}}">{{email}}</a></p>
 	<p>call me: {{mobile}}</p>
-	{{#web}}<p>or visite my <a href="{{web}}" target="_blank">personal website</a></p>{{/web}}
+	{{#web}}<p>or visit my <a href="{{web}}" target="_blank">personal website</a></p>{{/web}}
 	</div>
 
 	<h3>Social URLs</h3>
@@ -97,7 +100,7 @@ $(document).ready(function(){
 
 <!-- academic info -->
 <script id="academic_info" type="text/template">
-	<h2>Academic info</h2>
+	<h2><a name="academic_info">Academic info</a></h2>
 	<ul>{{#studies}}<li><strong>{{title}}</strong><p><em>{{period}}</em></p><p>{{center}}</p><p>{{city}}</p></li>{{/studies}}</ul>
 	<h3>Languages</h3>
 	<ul class="enum">
@@ -109,7 +112,7 @@ $(document).ready(function(){
 
 <!-- technical skills -->
 <script id="technical_skill_info" type="text/template">
-	<h2>Technical skills</h2>
+	<h2><a name="technical_skill_info">Technical skills</a></h2>
 	<ul class="enum">
 	{{#tech_skills}}
 		<li>{{.}}</li>
@@ -119,7 +122,7 @@ $(document).ready(function(){
 
 <!-- professional info -->
 <script id="professional_info" type="text/template">
-	<h2>Professional info</h2>
+	<h2><a name="professional_info">Professional info</a></h2>
 	<ul>
 		{{#prof_experience}}
 		<li>
@@ -134,7 +137,7 @@ $(document).ready(function(){
 
 <!-- project info -->
 <script id="project_info" type="text/template">
-	<h2>My projects</h2>
+	<h2><a name="project_info">My projects</a></h2>
 	<ul>
 	{{#projects}}
 	<li>

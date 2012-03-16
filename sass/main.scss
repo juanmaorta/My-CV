@@ -34,7 +34,12 @@ strong {
 h1, h2, h3 {
 	font-weight: normal;
 	margin: 0 0 .5em 0;
-	color: $title_color; }
+	color: $title_color;
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}
 
 
 ul {
@@ -44,46 +49,6 @@ ul {
 	li { 
 		margin-bottom: 1em ;
 		p { margin: 0; } } }
-
-#menu {
-	color: $menu_color;
-	width: 20%;
-	float: left; 
-	li {margin: .2em 0; 
-		@media screen and (max-width: 480px) {
-			margin: .8em 0;
-		}
-	} 
-
-	a {
-		color: inherit; 
-		text-decoration: none;
-		&:hover {color: $strong_color;} } 
-	@media screen and (max-width: 768px) {
-		float: none;
-		width: 100%;
-		margin-bottom: 5%; } 
-	@media screen and (max-width: 480px) {
-		margin-bottom: 10%;
-	}
-}
-
-
-.print {
-	background:url('../img/printer.png') no-repeat 0 0;
-	padding: 0 0 0 2em;
-	@include text-shadow(#fff, 1px, 1px, 1px);
-}
-
-ul.enum {
-	padding-left: 1.1em;
-	/* list-style-type:square; */
-	list-style-image:url('../img/bullet.png');
-	li { margin-bottom: .25em; } }
-
-p.desc {
-	font-size: .9em;
-	margin: .25em 0 3em 0; }
 
 #wrapper {
 	width: 90%;
@@ -126,5 +91,56 @@ p.desc {
 	clear: both;
 	margin: 1% auto;
 	text-align: center;
+	p {
+		margin: 2em auto 0 auto;
+		font-size: .9em;
+		line-height: 1.6em;
+		width: 80%;
+		text-align: center;
+	}
 }
+
+#menu {
+	color: $menu_color;
+	width: 20%;
+	float: left; 
+	li {margin: .2em 0; 
+		@media screen and (max-width: 480px) {
+			margin: .8em 0;
+		}
+	} 
+
+	a {
+		color: inherit; 
+		text-decoration: none;
+		&:hover {color: $strong_color;} } 
+	@media screen and (max-width: 768px) {
+		float: none;
+		width: 100%;
+		margin-bottom: 5%; } 
+	@media screen and (max-width: 480px) {
+		margin-bottom: 10%;
+	}
+}
+
+
+.print {
+	background:url('../img/printer.png') no-repeat 0 0;
+	padding: 0 0 0 2em;
+	@include text-shadow(#fff, 1px, 1px, 1px);
+	@media screen and (max-width: 480px) {
+		display: none;
+	}
+}
+
+ul.enum {
+	padding-left: 1.1em;
+	/* list-style-type:square; */
+	list-style-image:url('../img/bullet.png');
+	li { margin-bottom: .25em; } }
+
+p.desc {
+	font-size: .9em;
+	margin: .25em 0 3em 0; }
+
 
