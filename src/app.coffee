@@ -2,6 +2,11 @@ candidate = new Candidate()
 
 candidate.loadJSON(mycv)
 
+displayIdInfo = (el, cand) ->
+	if el? and cand?
+		template = $("#id_info").html()
+		renderView(template, el, cand)
+
 displayPersonalInfo = (el, cand) ->
 	if el? and cand?
 		template = $("#personal_info").html()

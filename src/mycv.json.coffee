@@ -16,7 +16,7 @@ mycv =
 		country_of_birth: "Spain"
 		city_of_residence: "Barcelona"
 		country_of_residence: "Spain"
-		photo: "http://www.juanmaorta.com/gallery/juanmaorta/12335190Xm_sm.jpg"
+		photo: "./img/myself.jpg"
 
 
 	contact_info:

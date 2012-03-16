@@ -6,82 +6,72 @@
 	<script language="Javascript" src="./app/cv.class.js" ></script>
 	<script language="Javascript" src="./app/mycv.json.js" ></script>
 	<script language="Javascript" src="./app/app.js" ></script>
-	<style type="text/css">
-	body {font-family: "Andale Mono", "Courier new", Courier; font-size: 14px; margin: 2em; background-color: #fff; color: #666;}
-	p {margin: .2em 0; line-height: 1.4em;}
-	p strong {font-weight: normal; color: #000;}
-	a {color: red; text-decoration: none;}
-	a:hover {color: blue;}
-	h2, h3 {font-weight: normal; margin: 1em 0; color: #333;}
-
-	ul {list-style: none; margin: 0; padding: 0;}
-
-	.menu {color: green; width: 300px; float: left;}
-	.menu li {margin: .2em 0;}
-	.menu a {color: inherit;}
-	.menu a:hover {color: #000;}
-
-	ul.itemlist li {margin-bottom: 3em;}
-	ul.enum {padding-left: 1em; list-style-type:square}
-
-	p.desc {font-size: .9em; margin-top: 1em;}
-
-
-	#display_info {width: 550px; float: left; margin-left: 50px;}
-	img#cand_photo {float: right;}
-	</style>
+	<link href="./css/main.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
+<div id="wrapper">
+	<ul id="menu">
+		<li><a href="#" title="personal">.displayPersonalInfo()</a></li>
+		<li><a href="#" title="academic">.displayAcademicInfo()</a></li>
+		<li><a href="#" title="professional">.displayProfesionalInfo()</a></li>
+		<li><a href="#" title="tech">.displayTechnicalSkills()</a></li>
+		<li><a href="#" title="projects">.displayProjects()</a></li>
+	</ul>
+	<div id="display_info">
 
-<ul class="menu">
-	<li><a href="#" title="personal">.displayPersonalInfo()</a></li>
-	<li><a href="#" title="academic">.displayAcademicInfo()</a></li>
-	<li><a href="#" title="professional">.displayProfesionalInfo()</a></li>
-	<li><a href="#" title="tech">.displayTechnicalSkills()</a></li>
-	<li><a href="#" title="projects">.displayProjects()</a></li>
-</ul>
-<div id="display_info">
+	</div>
+	<div id="id_info_cont">
 
+	</div>
+	<div style="clear: both;"></div>
 </div>
 
 <script>
 $(document).ready(function(){
-   	$cont = $("#display_info");
+   	$maincont = $("#display_info");
+   	$idcont = $("#id_info_cont");
    	
-	$(".menu a").click(function () {
+	$("#menu a").click(function () {
 		switch($(this).attr("title")) {
 			case "personal":
-				displayPersonalInfo($cont, candidate);
+				displayPersonalInfo($maincont, candidate);
 				break;
 			case "academic":
-				displayAcademicInfo($cont, candidate);
+				displayAcademicInfo($maincont, candidate);
 				break;
 			case "professional":
-				displayProfesionalInfo($cont, candidate);
+				displayProfesionalInfo($maincont, candidate);
 				break;
 			case "tech":
-				displayTechnicalSkills($cont, candidate);
+				displayTechnicalSkills($maincont, candidate);
 				break;
 			case "projects":
-				displayProjects($cont, candidate);
+				displayProjects($maincont, candidate);
 				break;
 		}
 	});
 
+	// shows id info
+	displayIdInfo($idcont, candidate);
 	// shows default content
-	displayPersonalInfo($cont, candidate);
+	displayPersonalInfo($maincont, candidate);
  });
 </script>
 
 <!-- Mustache templates -->
-<!-- Personal info -->
-<script id="personal_info" type="text/template">
-	{{#photo}}<img src="{{photo}}" alt="{{name}}'s photo" id="cand_photo"/>{{/photo}}
+<!-- personal info -->
+<script id="id_info" type="text/template">
 	<h2>{{name}} {{surname}}</h2>
+	{{#photo}}<img src="{{photo}}" alt="{{name}}'s photo" />{{/photo}}
+</script>
+
+<script id="personal_info" type="text/template">
+	<h2>Personal info</h2>
+	<p>{{name}} {{surname}}</p>
 	<p>{{gender}}, {{age}}</p>
 	<p><strong>I live in</strong> {{city_of_residence}} - {{country_of_residence}}</p>
 	
-	<div style="margin-top: 1em;">
+	<div style="margin: 1.5em 0;">
 	<p>I invite you to...
 	<p>say hello: <a href="mailto:{{email}}">{{email}}</a></p>
 	<p>call me: {{mobile}}</p>
@@ -92,6 +82,7 @@ $(document).ready(function(){
 	<ul class="enum">{{#other_urls}}<li><a href="{{url}}" target="_blank">{{name}}</a></li>{{/other_urls}}</ul>
 </script>
 
+<!-- academic info -->
 <script id="academic_info" type="text/template">
 	<h2>Academic info</h2>
 	<ul>{{#studies}}<li><strong>{{title}}</strong><p><em>{{period}}</em></p><p>{{center}}</p><p>{{city}}</p></li>{{/studies}}</ul>
@@ -103,6 +94,7 @@ $(document).ready(function(){
 	</ul>
 </script>
 
+<!-- technical skills -->
 <script id="technical_skill_info" type="text/template">
 	<h2>Technical skills</h2>
 	<ul class="enum">
@@ -112,9 +104,10 @@ $(document).ready(function(){
 	</ul>
 </script>
 
+<!-- professional info -->
 <script id="professional_info" type="text/template">
 	<h2>Professional info</h2>
-	<ul class="itemlist">
+	<ul>
 		{{#prof_experience}}
 		<li>
 			<h3>{{company}}</strong></h3>
@@ -126,9 +119,10 @@ $(document).ready(function(){
 	</ul>
 </script>
 
+<!-- project info -->
 <script id="project_info" type="text/template">
 	<h2>My projects</h2>
-	<ul class="itemlist">
+	<ul>
 	{{#projects}}
 	<li>
 		<a href="{{url}}" target="_blank"><strong>{{name}}</strong></a>
