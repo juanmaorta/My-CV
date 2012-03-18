@@ -20,6 +20,7 @@
 	</ul>
 	<div id="display_info"></div>
 	<div id="id_info_cont"></div>
+	<div style="clear: both;"></div>
 </div>
 <div id="footer">
 	<a href="javascript:;" class="print">Printer friendly version</a>
@@ -59,7 +60,7 @@ $(document).ready(function(){
 
 	// print
 	$("#footer").click(function () {
-		$('body').css("background-color", "#fff");
+		// $('body').css("background-color", "#fff");
 		$(".print").hide();
 		var append = true;
 
@@ -68,6 +69,9 @@ $(document).ready(function(){
 		displayProfesionalInfo($maincont, candidate, append);
 		displayTechnicalSkills($maincont, candidate, append);
 		displayProjects($maincont, candidate, append);
+		
+		// shows the hidden urls for non-interactive media
+		$(".url").show();
 		window.print();
 	});
  });
@@ -91,11 +95,20 @@ $(document).ready(function(){
 	<p style="margin-bottom: 1em;">I invite you to...</p>
 	<p>say hello: <a href="mailto:{{email}}">{{email}}</a></p>
 	<p>call me: {{mobile}}</p>
-	{{#web}}<p>or visit my <a href="{{web}}" target="_blank">personal website</a></p>{{/web}}
+	{{#web}}<p>or visit my <a href="{{web}}" target="_blank">personal website</a></p>
+	<p class="url">{{web}}</p>
+	{{/web}}
 	</div>
 
 	<h3>Social URLs</h3>
-	<ul class="enum">{{#other_urls}}<li><a href="{{url}}" target="_blank">{{name}}</a></li>{{/other_urls}}</ul>
+	<ul class="enum">
+	{{#other_urls}}
+		<li>
+			<a href="{{url}}" target="_blank">{{name}}</a>
+			<p class="url">{{url}}</p>
+		</li>
+	{{/other_urls}}
+	</ul>
 </script>
 
 <!-- academic info -->
@@ -125,11 +138,12 @@ $(document).ready(function(){
 	<h2><a name="professional_info">Professional info</a></h2>
 	<ul>
 		{{#prof_experience}}
-		<li>
+		<li class="container">
 			<h3>{{company}}</strong></h3>
-			<p>{{position}}</p>
+			{{#position}}<h4>{{position}}</h4>{{/position}}
 			<p>{{period}}</p>
-			{{#description}}<p class="desc">{{description}}</p>{{/description}}
+			{{#description}}<p>{{description}}</p>{{/description}}
+			{{#duties}}<p>{{duties}}</p>{{/duties}}
 		</li>
 		{{/prof_experience}}
 	</ul>
@@ -140,10 +154,11 @@ $(document).ready(function(){
 	<h2><a name="project_info">My projects</a></h2>
 	<ul>
 	{{#projects}}
-	<li>
+	<li class="container">
 		<a href="{{url}}" target="_blank"><strong>{{name}}</strong></a>
+		<p class="url">{{url}}</p>
 		{{#duties}}<p>{{duties}}</p>{{/duties}}
-		{{#description}}<p class="desc">{{description}}</p>{{/description}}
+		{{#description}}<p>{{description}}</p>{{/description}}
 	</li>
 	{{/projects}}
 	</ul>

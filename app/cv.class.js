@@ -274,7 +274,7 @@ Language = (function() {
 })();
 
 Experience = (function() {
-  var company, description, period, position;
+  var company, description, duties, period, position;
 
   period = '';
 
@@ -284,11 +284,14 @@ Experience = (function() {
 
   description = '';
 
+  duties = '';
+
   function Experience(obj) {
     this.period = obj.period;
     this.position = obj.position;
     this.company = obj.company;
     this.description = obj.description;
+    this.duties = obj.duties;
   }
 
   return Experience;

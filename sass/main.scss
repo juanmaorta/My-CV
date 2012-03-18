@@ -24,14 +24,16 @@ p {
 
 a {color: $link_color; 
 	text-decoration: underline;
-	&:hover {color: $link_hover;} }
+	&:hover {color: $link_hover;} 
+	strong {color: inherit;}	
+}
 
 strong {
 	font-weight: normal;
 	color: $strong_color; }
 
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	font-weight: normal;
 	margin: 0 0 .5em 0;
 	color: $title_color;
@@ -139,8 +141,13 @@ ul.enum {
 	list-style-image:url('../img/bullet.png');
 	li { margin-bottom: .25em; } }
 
-p.desc {
-	font-size: .9em;
-	margin: .25em 0 3em 0; }
+li.container {
+	margin: .25em 0 3em 0;
+	p {
+		font-size: .9em;
+		margin: .25em 0 1em 0;
+	}
+}
 
+p.url {display: none;}
 

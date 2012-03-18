@@ -187,12 +187,14 @@ class Experience
 	position = ''
 	company = ''
 	description = ''
+	duties = ''
 
 	constructor: (obj) ->
 		@period = obj.period
 		@position = obj.position
 		@company = obj.company
 		@description = obj.description
+		@duties = obj.duties
 
 class Project
 	name = ''
