@@ -144,6 +144,7 @@ $(document).ready(function(){
 			<p>{{period}}</p>
 			{{#description}}<p>{{description}}</p>{{/description}}
 			{{#duties}}<p>{{duties}}</p>{{/duties}}
+			{{#url}}<a href="{{url}}" target="_blank">{{url}}</a>{{/url}}
 		</li>
 		{{/prof_experience}}
 	</ul>
@@ -151,7 +152,7 @@ $(document).ready(function(){
 
 <!-- project info -->
 <script id="project_info" type="text/template">
-	<h2><a name="project_info">My projects</a></h2>
+	<h2><a name="project_info">Some freelance projects</a></h2>
 	<ul>
 	{{#projects}}
 	<li class="container">

@@ -69,61 +69,49 @@ mycv = {
   ],
   professional_experience: [
     {
-      period: "2006 - present",
-      company: "Use Your Time SL",
-      position: "CTO",
-      description: "Use Your Time is an internet company specialized in online job boards. It's  main project is Yobalia.com, a job boards		for people between 23 and 35 years.",
-      duties: "My resposabilities here are mainly technical: analysis, design and development of front and backend apps, sysadmin of the server farm (now in 			collaboration with an external firm) and coordination with freelance designers and developpers."
-    }, {
-      period: "2000 - present",
-      company: "Ameba Interactiva SL",
-      position: "Founder and main developper",
-      description: "Ameba Interactiva it's the company behind Fotonatura.org, the main Spanish online community of nature photography.",
-      duties: "Here I'm also part of the company's administrative board, so I take part in commercial and		strategical decisions. My technical duties are analysis, design and development of the application (back and front-end), system administrator, 		database administrator and coordination with the freelance developpers."
-    }, {
       period: "2005 - present",
       company: "Portafolionline.com",
       position: "Founder and main developper",
-      description: "Portafolionline it's a specialized CMS for photography and art websites. It allows graphic authors to 		create their own websites and showcase their work without effort.",
-      duties: "This is my personal project. Here I'm responsible of the development process, but also of hiring the right 		people for the right job. This can be a graphic designer, copywriter, front/back end developper. Most of them are remote workers, some working from as far as  		India."
+      description: "Portafolionline it's a specialized CMS for photography and art websites. It allows artists to 		create their own websites and showcase their work without effort.",
+      duties: "This is one of my personal projects. In fact, it's the one that gets most of my heart and mind nowadays. Here I'm responsible of the development process, but also of hiring the right 		people for the right job. This can be a graphic designer, copywriter, front/back end developper. Most of them are remote workers, some working from as far as  		India.",
+      url: "http://www.portafolionline.es"
+    }, {
+      period: "2006 - present",
+      company: "Use Your Time SL",
+      position: "CTO",
+      description: "Use Your Time is an internet company specialized in online job boards. It's  main project is Yobalia.com, a job board		for people between 23 and 35 years.",
+      duties: "My resposabilities here are mainly technical: analysis, design and development of front and backend apps, sysadmin of the server farm (now in 			collaboration with an external firm) and coordination with freelance designers and developpers.",
+      url: "http://www.yobalia.com"
+    }, {
+      period: "2000 - present",
+      company: "Ameba Interactiva SL",
+      position: "Co-founder and CTO",
+      description: "Ameba Interactiva it's the company behind Fotonatura.org, the main Spanish online community of nature photography.",
+      duties: "Here I'm also part of the company's administrative board, so I take part in commercial and		strategical decisions. My other responsilibies include analysis, design and development of the application (back and front-end), system and database administrator and coordination with the freelance developpers.",
+      url: "http://www.fotonatura.org"
     }, {
       period: "2000 - present",
       company: "Freelance",
       description: "During the last 12 years, I've also been working as a freelance front and back end developper for many independent 		customers. You can see the some of the most relevant in the .displayProjects() section"
     }
   ],
-  tech_skills: ["PHP", "Javascript", "Coffeescript", "CSS", "SASS/SCSS", "Java", "Actionscript", "MySQL (SQL and admin)", "git", "Subversion", "Linux (Ubuntu, CentOS)", "OS X"],
+  tech_skills: ["PHP", "Javascript", "Coffeescript", "CSS", "SASS/SCSS", "Java", "Smarty", "MySQL (SQL and admin)", "git", "Subversion", "Linux (Ubuntu, CentOS)", "OS X"],
   personal_skills: [],
   projects: [
     {
-      name: "Portafolionline",
-      url: "http://www.portafolionline.es",
-      duties: "Main developper",
-      description: "Vestibulum lobortis arcu et diam posuere sodales. Duis et lorem sed dolor venenatis blandit eget in purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam eget placerat orci. Pellentesque risus tellus, imperdiet eu hendrerit in, viverra eget neque. Pellentesque fermentum quam imperdiet elit ultricies vitae dignissim tortor interdum."
-    }, {
-      name: "Fotonatura.org",
-      url: "http://www.fotonatura.org",
-      duties: "Main developper",
-      description: "Vestibulum lobortis arcu et diam posuere sodales. Duis et lorem sed dolor venenatis blandit eget in purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam eget placerat orci. Pellentesque risus tellus, imperdiet eu hendrerit in, viverra eget neque. Pellentesque fermentum quam imperdiet elit ultricies vitae dignissim tortor interdum."
-    }, {
-      name: "Yobalia.com",
-      url: "http://www.yobalia.com",
-      description: "Dolor sit amet",
-      duties: ""
-    }, {
       name: "Orenetes.cat",
       url: "http://www.orenetes.cat",
-      description: "Dolor sit amet",
+      description: "One of those one in a lifetime projects. Orenetes ('housemartins' in Catalan) its a project designed to approach ecology to the peopel. It's subject is to track housemartins nests around Catalonia, but in fact		it makes people more conscious about their enviroment. It has an intensive Google Map's API use and also deep datamining to show maps, charts and reports. I love it because, years after obtaining my degree in biology, 		gave me the opportunity to apply some of my ecology knowledge in my new career.",
       duties: ""
     }, {
       name: "Naturapics",
       url: "http://gallerie.naturapics.com",
-      description: "Dolor sit amet",
+      description: "Naturapics it's an spin-off project of Fotonatura. A friend of us thought it could be a nice idea to adapt our 		software platform to show the images of the French photographers. And we did. Our tools appears as a subdomain of the main site... but it's where 		the beauty of French photography can be admired.",
       duties: ""
     }, {
       name: "Personalparatiendas.com",
       url: "http://www.personalparatiendas.com",
-      description: "Dolor sit amet",
+      description: "The younger bro of Yobalia, initially designed to hold retail job offers, now it's about to be incorporated to it's elder. Anyway I like it 		because it was one of my first successful 'table-less' layouts and I did a nice code refactorization, which after a few years, led to what Yobalia.com is now.",
       duties: ""
     }, {
       name: "Martina K",
