@@ -41,4 +41,11 @@ renderView = (template, el, cand, append = false) ->
 		else
 			el.html html
 
-printerView = ->
+printerView = (el, cand) ->
+	append = true
+
+	displayPersonalInfo(el, cand)
+	displayAcademicInfo(el, cand, append)
+	displayProfesionalInfo(el, cand, append)
+	displayTechnicalSkills(el, cand, append)
+	displayProjects(el, cand, append)

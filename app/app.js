@@ -69,4 +69,12 @@ renderView = function(template, el, cand, append) {
   }
 };
 
-printerView = function() {};
+printerView = function(el, cand) {
+  var append;
+  append = true;
+  displayPersonalInfo(el, cand);
+  displayAcademicInfo(el, cand, append);
+  displayProfesionalInfo(el, cand, append);
+  displayTechnicalSkills(el, cand, append);
+  return displayProjects(el, cand, append);
+};

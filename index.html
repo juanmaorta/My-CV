@@ -60,16 +60,10 @@ $(document).ready(function(){
 
 	// print
 	$("#footer").click(function () {
-		// $('body').css("background-color", "#fff");
-		$(".print").hide();
-		var append = true;
+		printerView($maincont, candidate);
 
-		displayPersonalInfo($maincont, candidate);
-		displayAcademicInfo($maincont, candidate, append);
-		displayProfesionalInfo($maincont, candidate, append);
-		displayTechnicalSkills($maincont, candidate, append);
-		displayProjects($maincont, candidate, append);
-		
+		// hides the printer-friendly link
+		$(".print").hide();
 		// shows the hidden urls for non-interactive media
 		$(".url").show();
 		window.print();
