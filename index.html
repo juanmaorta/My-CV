@@ -17,6 +17,7 @@
 		<li><a href="#technical_skill_info" title="professional">.displayProfesionalInfo()</a></li>
 		<li><a href="#professional_info" title="tech">.displayTechnicalSkills()</a></li>
 		<li><a href="#project_info" title="projects">.displayProjects()</a></li>
+		<li><a href="#hobbies_info" title="hobbies">.displayHobbies()</a></li>
 	</ul>
 	<div id="display_info"></div>
 	<div id="id_info_cont"></div>
@@ -54,6 +55,9 @@ $(document).ready(function(){
 				break;
 			case "projects":
 				myApp.displayProjects($maincont, candidate);
+				break;
+			case "hobbies":
+				myApp.displayHobbies($maincont, candidate);
 				break;
 		}
 	});
@@ -163,5 +167,20 @@ $(document).ready(function(){
 	{{/projects}}
 	</ul>
 </script>
+
+<!-- hobbies info -->
+<script id="hobbies_info" type="text/template">
+	<h2><a name="hobbies_info">My passions</a></h2>
+	<ul>
+	{{#hobbies}}
+	<li class="container">
+		<strong>{{name}}</strong>
+		{{#description}}<p>{{description}}</p>{{/description}}
+		{{#image}}<img src="{{image}}" />{{/image}}
+	</li>
+	{{/hobbies}}
+	</ul>
+</script>
+
 </body>
 </html>

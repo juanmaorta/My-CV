@@ -1,7 +1,7 @@
-var Candidate, Experience, Language, PersonalUrl, Project, Study;
+var Candidate, Experience, Hobby, Language, PersonalUrl, Project, Study;
 
 Candidate = (function() {
-  var age, birth_date, city_of_birth, city_of_residence, country_of_birth, country_of_residence, email, gender, languages, mobile, name, other_urls, personal_skills, photo, prof_experience, projects, studies, surname, tech_skills, web;
+  var age, birth_date, city_of_birth, city_of_residence, country_of_birth, country_of_residence, email, gender, hobbies, languages, mobile, name, other_urls, personal_skills, photo, prof_experience, projects, studies, surname, tech_skills, web;
 
   name = '';
 
@@ -43,6 +43,8 @@ Candidate = (function() {
 
   projects = [];
 
+  hobbies = [];
+
   function Candidate() {
     this.other_urls = new Array();
     this.studies = new Array();
@@ -51,10 +53,11 @@ Candidate = (function() {
     this.tech_skills = Array();
     this.personal_skills = Array();
     this.projects = Array();
+    this.hobbies = Array();
   }
 
   Candidate.prototype.loadJSON = function(json) {
-    var exp, key, language, myurl, obj, proj, study, url, value, _i, _j, _k, _l, _len, _len2, _len3, _len4, _len5, _m, _ref, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _results;
+    var exp, hobby, key, language, myurl, obj, proj, study, url, value, _i, _j, _k, _l, _len, _len2, _len3, _len4, _len5, _len6, _m, _n, _ref, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _results;
     if (json != null) {
       if (json.personal_data != null) {
         _ref = json.personal_data;
@@ -113,11 +116,19 @@ Candidate = (function() {
       }
       if ((json.projects != null) && json.projects.length > 0) {
         _ref7 = json.projects;
-        _results = [];
         for (_m = 0, _len5 = _ref7.length; _m < _len5; _m++) {
           proj = _ref7[_m];
           obj = new Project(proj);
-          _results.push(this.addProject(obj));
+          this.addProject(obj);
+        }
+      }
+      if ((json.hobbies != null) && json.hobbies.length > 0) {
+        _ref8 = json.hobbies;
+        _results = [];
+        for (_n = 0, _len6 = _ref8.length; _n < _len6; _n++) {
+          hobby = _ref8[_n];
+          obj = new Hobby(hobby);
+          _results.push(this.addHobby(obj));
         }
         return _results;
       }
@@ -188,6 +199,11 @@ Candidate = (function() {
 
   Candidate.prototype.addProject = function(project) {
     this.projects.push(project);
+    return false;
+  };
+
+  Candidate.prototype.addHobby = function(project) {
+    this.hobbies.push(project);
     return false;
   };
 
@@ -317,5 +333,24 @@ Project = (function() {
   }
 
   return Project;
+
+})();
+
+Hobby = (function() {
+  var description, image, name;
+
+  name = '';
+
+  description = '';
+
+  image = '';
+
+  function Hobby(obj) {
+    this.name = obj.name;
+    this.description = obj.description;
+    this.image = obj.image;
+  }
+
+  return Hobby;
 
 })();

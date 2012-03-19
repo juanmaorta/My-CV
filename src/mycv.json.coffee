@@ -117,6 +117,21 @@ mycv =
 
 	personal_skills: []
 
+	hobbies: [
+		name: "Photography"
+		description: "It's about 28 years I'm pressing the shutter, so if I had to choose the one and only hobby, that would be photography. It's my way to express myself and specially, what I feel when I'm in a natural enviroment.
+		Although I love all photography disciplines, nature photography is my fav, no doubt about it. And it's also a good excuse to travel and visit new places!"
+		image: "./img/taking_photos.jpg"
+	,
+		name: "Scuba diving"
+		description: "Think about visiting another planet. Think about flying. That's scuba diving. But it can be even better... just add a camera ;-)"
+		image: "./img/scuba2.jpg"
+	,
+		name: "Jogging"
+		description: "I don't know if it's a hobby or just a way of keeping sanity. Too many hours at the keyboard can be harsh. Take a gentle run around the neighborhood and everything looks much better."
+	,
+	]
+
 	projects: [
 		name: "Orenetes.cat"
 		url: "http://www.orenetes.cat"

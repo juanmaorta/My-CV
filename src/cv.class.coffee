@@ -21,6 +21,7 @@ class Candidate
 	tech_skills = []
 	personal_skills = []
 	projects = []
+	hobbies = []
 
 	constructor:  ->
 		@other_urls = new Array()
@@ -30,6 +31,7 @@ class Candidate
 		@tech_skills = Array()
 		@personal_skills = Array()
 		@projects = Array()
+		@hobbies = Array()
 
 
 	loadJSON: (json) ->
@@ -77,6 +79,11 @@ class Candidate
 				for proj in json.projects
 					obj = new Project(proj)
 					@addProject(obj)
+
+			if json.hobbies? and json.hobbies.length > 0
+				for hobby in json.hobbies
+					obj = new Hobby(hobby)
+					@addHobby(obj)
 
 			# console.log @
 		else
@@ -134,6 +141,10 @@ class Candidate
 		@projects.push(project)
 		return false
 
+	addHobby: (project) ->
+		@hobbies.push(project)
+		return false
+
 	getStudies: ->
 		if @studies.length <= 0
 			return null
@@ -162,6 +173,7 @@ class PersonalUrl
 	constructor: (obj) ->
 		@name = obj.name
 		@url = obj.url
+
 class Study
 	title = ''
 	center = ''
@@ -208,3 +220,12 @@ class Project
 		@url = obj.url
 		@description = obj.description
 
+class Hobby
+	name = ''
+	description = ''
+	image = ''
+
+	constructor: (obj) ->
+		@name = obj.name
+		@description = obj.description
+		@image = obj.image

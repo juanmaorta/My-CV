@@ -28,11 +28,16 @@ myApp =
 			template = $("#technical_skill_info").html()
 			@.renderView(template, el, cand, append)
 
-
 	displayProjects: (el, cand, append = false) ->
 		if el? and cand?
 			template = $("#project_info").html()
 			@.renderView(template, el, cand, append)
+
+	displayHobbies: (el, cand, append = false) ->
+		if el? and cand?
+			template = $("#hobbies_info").html()
+			@.renderView(template, el, cand, append)
+
 
 	renderView:(template, el, cand, append = false) ->
 			html = Mustache.to_html(template, cand)
@@ -49,3 +54,4 @@ myApp =
 		@.displayProfesionalInfo(el, cand, append)
 		@.displayTechnicalSkills(el, cand, append)
 		@.displayProjects(el, cand, append)
+		@.displayHobbies(el, cand, append)

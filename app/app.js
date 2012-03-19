@@ -51,6 +51,14 @@ myApp = {
       return this.renderView(template, el, cand, append);
     }
   },
+  displayHobbies: function(el, cand, append) {
+    var template;
+    if (append == null) append = false;
+    if ((el != null) && (cand != null)) {
+      template = $("#hobbies_info").html();
+      return this.renderView(template, el, cand, append);
+    }
+  },
   renderView: function(template, el, cand, append) {
     var html;
     if (append == null) append = false;
@@ -68,6 +76,7 @@ myApp = {
     this.displayAcademicInfo(el, cand, append);
     this.displayProfesionalInfo(el, cand, append);
     this.displayTechnicalSkills(el, cand, append);
-    return this.displayProjects(el, cand, append);
+    this.displayProjects(el, cand, append);
+    return this.displayHobbies(el, cand, append);
   }
 };
