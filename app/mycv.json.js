@@ -92,16 +92,16 @@ mycv = {
     }, {
       period: "2000 - present",
       company: "Freelance",
-      description: "During the last 12 years, I've also been working as a freelance front and back end developper for many independent 		customers. You can see the some of the most relevant in the .displayProjects() section"
+      description: "During the last 12 years, I've also been working as a freelance front and back end developper for many independent 		customers. You can see some of the most relevant in the .displayProjects() section"
     }
   ],
-  tech_skills: ["PHP", "Javascript", "Coffeescript", "CSS", "SASS/SCSS", "Java", "Smarty", "MySQL (SQL and admin)", "git", "Subversion", "Linux (Ubuntu, CentOS)", "OS X"],
+  tech_skills: ["Javascript", "jQuery", "PHP", "Coffeescript", "CSS", "SASS/SCSS", "Java", "Smarty", "MySQL (SQL and admin)", "git", "Subversion", "Linux (Ubuntu, CentOS)", "OS X"],
   personal_skills: [],
   projects: [
     {
       name: "Orenetes.cat",
       url: "http://www.orenetes.cat",
-      description: "One of those one in a lifetime projects. Orenetes ('housemartins' in Catalan) its a project designed to approach ecology to the peopel. It's subject is to track housemartins nests around Catalonia, but in fact		it makes people more conscious about their enviroment. It has an intensive Google Map's API use and also deep datamining to show maps, charts and reports. I love it because, years after obtaining my degree in biology, 		gave me the opportunity to apply some of my ecology knowledge in my new career.",
+      description: "One of those one in a lifetime projects. Orenetes ('housemartins' in Catalan) its a project designed to approach ecology to the people. It's subject is to track housemartins nests around Catalonia, but in fact		it makes people more conscious about their enviroment. It has an intensive Google Map's API use and also deep datamining to show maps, charts and reports. I love it because, years after obtaining my degree in biology, 		gave me the opportunity to apply some of my ecology knowledge in my new career.",
       duties: ""
     }, {
       name: "Naturapics",
@@ -114,14 +114,14 @@ mycv = {
       description: "The younger bro of Yobalia, initially designed to hold retail job offers, now it's about to be incorporated to it's elder. Anyway I like it 		because it was one of my first successful 'table-less' layouts and I did a nice code refactorization, which after a few years, led to what Yobalia.com is now.",
       duties: ""
     }, {
-      name: "Martina K",
-      url: "http://www.martina-k.com",
-      description: "Dolor sit amet",
-      duties: ""
-    }, {
       name: "Marques especials",
       url: "http://marques.ornitologia.org",
-      description: "Dolor sit amet",
+      description: "Another social ornithology job, in this case to track bird migration. Amateur ornithologist use this web-app to record their sightings and the gathered data is put together to allow		for a better understanding of the bird migration fenomenon. The site has a lot of Google Maps use, as well as mootools. 'Marques especials' means 'special tags' in Catalan.",
+      duties: ""
+    }, {
+      name: "jquery.simple-plugins",
+      url: "https://github.com/juanmaorta/JQuery-plugins",
+      description: "A compendium of some jQuery plugins that I developped to use in my projects. Instead of loading heavy plugin libraries of which only a little part is used, 		I use this light script with the most used in my UIs.",
       duties: ""
     }
   ]
