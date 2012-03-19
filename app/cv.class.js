@@ -302,7 +302,7 @@ Experience = (function() {
 })();
 
 Project = (function() {
-  var description, duties, name, url;
+  var description, name, url;
 
   name = '';
 
@@ -310,13 +310,10 @@ Project = (function() {
 
   description = '';
 
-  duties = '';
-
   function Project(obj) {
     this.name = obj.name;
     this.url = obj.url;
     this.description = obj.description;
-    this.duties = obj.duties;
   }
 
   return Project;

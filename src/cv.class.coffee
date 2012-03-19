@@ -202,11 +202,9 @@ class Project
 	name = ''
 	url = ''
 	description = ''
-	duties = ''
 
 	constructor: (obj) ->
 		@name = obj.name
 		@url = obj.url
 		@description = obj.description
-		@duties = obj.duties
 

@@ -123,31 +123,26 @@ mycv =
 		description: "One of those one in a lifetime projects. Orenetes ('housemartins' in Catalan) its a project designed to approach ecology to the people. It's subject is to track housemartins nests around Catalonia, but in fact
 		it makes people more conscious about their enviroment. It has an intensive Google Map's API use and also deep datamining to show maps, charts and reports. I love it because, years after obtaining my degree in biology, 
 		gave me the opportunity to apply some of my ecology knowledge in my new career."
-		duties: ""
 	,
 		name: "Naturapics"
 		url: "http://gallerie.naturapics.com"
 		description: "Naturapics it's an spin-off project of Fotonatura. A friend of us thought it could be a nice idea to adapt our 
 		software platform to show the images of the French photographers. And we did. Our tools appears as a subdomain of the main site... but it's where 
 		the beauty of French photography can be admired."
-		duties: ""
 	,
 		name: "Personalparatiendas.com"
 		url: "http://www.personalparatiendas.com"
 		description: "The younger bro of Yobalia, initially designed to hold retail job offers, now it's about to be incorporated to it's elder. Anyway I like it 
 		because it was one of my first successful 'table-less' layouts and I did a nice code refactorization, which after a few years, led to what Yobalia.com is now."
-		duties: ""
 	,
 		name: "Marques especials"
 		url: "http://marques.ornitologia.org"
 		description: "Another social ornithology job, in this case to track bird migration. Amateur ornithologist use this web-app to record their sightings and the gathered data is put together to allow
 		for a better understanding of the bird migration fenomenon. The site has a lot of Google Maps use, as well as mootools. 'Marques especials' means 'special tags' in Catalan."
-		duties: ""
 	,
 		name: "jquery.simple-plugins"
 		url: "https://github.com/juanmaorta/JQuery-plugins"
 		description: "A compendium of some jQuery plugins that I developped to use in my projects. Instead of loading heavy plugin libraries of which only a little part is used, 
 		I use this light script with the most used in my UIs."
-		duties: ""
 	]
 
