@@ -30,37 +30,42 @@
 
 <script>
 $(document).ready(function(){
+   	var candidate, $maincont, $idcont;
+
+   	candidate = new Candidate();
+	candidate.loadJSON(mycv);
+
    	$maincont = $("#display_info");
    	$idcont = $("#id_info_cont");
    	
 	$("#menu a").click(function () {
 		switch($(this).attr("title")) {
 			case "personal":
-				displayPersonalInfo($maincont, candidate);
+				myApp.displayPersonalInfo($maincont, candidate);
 				break;
 			case "academic":
-				displayAcademicInfo($maincont, candidate);
+				myApp.displayAcademicInfo($maincont, candidate);
 				break;
 			case "professional":
-				displayProfesionalInfo($maincont, candidate);
+				myApp.displayProfesionalInfo($maincont, candidate);
 				break;
 			case "tech":
-				displayTechnicalSkills($maincont, candidate);
+				myApp.displayTechnicalSkills($maincont, candidate);
 				break;
 			case "projects":
-				displayProjects($maincont, candidate);
+				myApp.displayProjects($maincont, candidate);
 				break;
 		}
 	});
 
 	// shows id info
-	displayIdInfo($idcont, candidate);
+	myApp.displayIdInfo($idcont, candidate);
 	// shows default content
-	displayPersonalInfo($maincont, candidate);
+	myApp.displayPersonalInfo($maincont, candidate);
 
 	// print
 	$("#footer").click(function () {
-		printerView($maincont, candidate);
+		myApp.printerView($maincont, candidate);
 
 		// hides the printer-friendly link
 		$(".print").hide();

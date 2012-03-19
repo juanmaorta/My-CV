@@ -127,7 +127,7 @@ mycv =
 		name: "Naturapics"
 		url: "http://gallerie.naturapics.com"
 		description: "Naturapics it's an spin-off project of Fotonatura. A friend of us thought it could be a nice idea to adapt our 
-		software platform to show the images of the French photographers. And we did. Our tools appears as a subdomain of the main site... but it's where 
+		software platform to show the images of the French photographers. And we did it. Our tools appears as a subdomain of the main site... but it's where 
 		the beauty of French photography can be admired."
 	,
 		name: "Personalparatiendas.com"
