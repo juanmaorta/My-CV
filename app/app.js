@@ -8,6 +8,7 @@ myApp = {
     if (append == null) append = false;
     if ((el != null) && (cand != null)) {
       template = $("#id_info").html();
+      document.title = "" + cand.name + " " + cand.surname + " - Resumé";
       return this.renderView(template, el, cand, append);
     }
   },
