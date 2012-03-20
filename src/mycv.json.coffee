@@ -25,7 +25,7 @@ mycv =
 		web: "http://www.juanmaorta.com"
 		other_urls: [
 			name: "linkedin"
-			url: "http://es.linkedin.com/in/juanmaorta"
+			url: "http://linkd.in/JuanmaOrta"
 		,
 			name: "twitter"
 			url: "http://twitter.com/#!/JuanmaOrta"
@@ -66,22 +66,22 @@ mycv =
 	]
 
 	professional_experience: [
-		period: "2000 - present"
+		period: "2001 - present"
 		company: "Ameba Interactiva SL"
 		position: "Co-founder and CTO"
 		description: "Ameba Interactiva it's the company behind Fotonatura.org, the main Spanish online community of nature photography."
-		duties: "Here I'm also part of the company's administrative board, so I take part in commercial and
-		strategical decisions. My other responsilibies include analysis, design and development of the application (back and front-end), system and database administrator and coordination with the freelance developpers."
+		duties: "Here I'm also part of the company's board of directors, so I take part in commercial and
+		strategical decisions. My other responsilibies include analysis, design and development of the application (back and front-end), system and database administrator and coordination with the freelance developers."
 		tech: "The website is in its 5th version, now with an enriched Ajax UI in most of the pages and extensive jQuery use. I'm rewritting the private backoffice as a 'single page app' using Backbone and jQuery."
 		url: "http://www.fotonatura.org"
 	,
-		period: "2005 - present"
+		period: "2006 - present"
 		company: "Portafolionline.com"
-		position: "Founder and main developper"
+		position: "Founder and main developer"
 		description: "Portafolionline it's a specialized CMS for photography and art websites. It allows artists to 
 		create their own websites and showcase their work without effort."
 		duties: "This is one of my personal projects. In fact, it's the one that gets most of my heart and mind nowadays. Here I'm responsible of the development process, but also of hiring the right 
-		people for the right job. This can be a graphic designer, copywriter, front/back end developper. Most of them are remote workers, some working from as far as  
+		people for the right job. This can be a graphic designer, copywriter, front/back end developer. Most of them are remote workers, some working from as far as  
 		India."
 		url: "http://www.portafolionline.es"
 	,
@@ -91,12 +91,12 @@ mycv =
 		description: "Use Your Time is an internet company specialized in online job boards. It's  main project is Yobalia.com, a job board
 		for people between 23 and 35 years."
 		duties: "My resposabilities here are mainly technical: analysis, design and development of front and backend apps, sysadmin of the server farm (now in 
-			collaboration with an external firm) and coordination with freelance designers and developpers."
+			collaboration with an external firm) and coordination with freelance designers and developers."
 		url: "http://www.yobalia.com"
 	,
 		period : "2000 - present"
 		company: "Freelance"
-		description: "During the last 12 years, I've also been working as a freelance front and back end developper for many independent 
+		description: "During the last 12 years, I've also been working as a freelance front and back end developer for many independent 
 		customers. You can see some of the most relevant in the .displayProjects() section"
 	]
 
@@ -120,7 +120,7 @@ mycv =
 
 	hobbies: [
 		name: "Photography"
-		description: "It's about 28 years I'm pressing the shutter, so if I had to choose the one and only hobby, that would be photography. It's my way to express myself and specially, what I feel when I'm in a natural enviroment.
+		description: "I've been pressing the shutter for 28 years now, so if I had to choose the one and only hobby, that would be photography. It's my way to express myself and specially, what I feel when I'm in a natural enviroment.
 		Although I love all photography disciplines, nature photography is my fav, no doubt about it. And it's also a good excuse to travel and visit new places!"
 		image: "./img/taking_photos.jpg"
 	,
@@ -129,21 +129,21 @@ mycv =
 		image: "./img/scuba2.jpg"
 	,
 		name: "Jogging"
-		description: "I don't know if it's a hobby or just a way of keeping sanity. Too many hours at the keyboard can be harsh. Take a gentle run around the neighborhood and everything looks much better."
+		description: "I don't know if it's a hobby or just a way of keeping sanity. Too many hours at the keyboard can be harsh. Go for a gentle run around the neighborhood and everything looks much better."
 	,
 	]
 
 	projects: [
 		name: "Orenetes.cat"
 		url: "http://www.orenetes.cat"
-		description: "One of those one in a lifetime projects. Orenetes ('housemartins' in Catalan) its a project designed to approach ecology to the people. It's subject is to track housemartins nests around Catalonia, but in fact
+		description: "One of those one in a lifetime projects. Orenetes ('housemartins' in Catalan) its a project designed to bring ecology to people. It's subject is to track housemartins nests around Catalonia, but in fact
 		it makes people more conscious about their enviroment. It has an intensive Google Map's API use and also deep datamining to show maps, charts and reports. I love it because, years after obtaining my degree in biology, 
 		gave me the opportunity to apply some of my ecology knowledge in my new career."
 	,
 		name: "Naturapics"
-		url: "http://gallerie.naturapics.com"
+		url: "http://galerie.naturapics.com"
 		description: "Naturapics it's an spin-off project of Fotonatura. A friend of us thought it could be a nice idea to adapt our 
-		software platform to show the images of the French photographers. And we did it. Our tools appears as a subdomain of the main site... but it's where 
+		software platform to show the images of the French photographers. And we did it. Our tool appears as a subdomain of the main site... but it's where 
 		the beauty of French photography can be admired."
 	,
 		name: "Personalparatiendas.com"

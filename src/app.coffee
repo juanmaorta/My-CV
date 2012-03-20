@@ -6,7 +6,7 @@ myApp =
 		if el? and cand?
 			template = $("#id_info").html()
 			# changes page title
-			document.title = "#{cand.name} #{cand.surname} - Resumé"
+			document.title = "#{cand.name} #{cand.surname} - Resume"
 			@.renderView(template, el, cand, append)
 
 	displayPersonalInfo: (el, cand, append = false) ->

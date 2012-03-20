@@ -12,6 +12,8 @@ h2.first {
 
 #menu {
   font-size: .8em; }
+  #menu a.current {
+    color: #006600; }
 
 #wrapper, #footer {
   width: 100%; }
