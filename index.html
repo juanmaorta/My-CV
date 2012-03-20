@@ -3,6 +3,7 @@
 	<title></title>
 	<meta charset="utf-8">
 	<script language="Javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script language="Javascript" src="./libs/jquery.ba-hashchange.min.js"></script>
 	<script language="Javascript" src="./libs/mustache.js"></script>
 	<script language="Javascript" src="./app/cv.class.js" ></script>
 	<script language="Javascript" src="./app/mycv.json.js" ></script>
@@ -15,8 +16,8 @@
 	<ul id="menu">
 		<li><a href="#personal_info" title="personal">.displayPersonalInfo()</a></li>
 		<li><a href="#academic_info" title="academic">.displayAcademicInfo()</a></li>
-		<li><a href="#technical_skill_info" title="professional">.displayProfesionalInfo()</a></li>
-		<li><a href="#professional_info" title="tech">.displayTechnicalSkills()</a></li>
+		<li><a href="#professional_info" title="professional">.displayProfesionalInfo()</a></li>
+		<li><a href="#technical_skill_info" title="tech">.displayTechnicalSkills()</a></li>
 		<li><a href="#project_info" title="projects">.displayProjects()</a></li>
 		<li><a href="#hobbies_info" title="hobbies">.displayHobbies()</a></li>
 	</ul>
@@ -40,33 +41,41 @@ $(document).ready(function(){
    	$maincont = $("#display_info");
    	$idcont = $("#id_info_cont");
    	
-	$("#menu a").click(function () {
-		switch($(this).attr("title")) {
-			case "personal":
+   	// mini-router to load content
+   	// so it will maintain state on page reloads
+
+	$(window).hashchange( function(){
+		var param = (window.location.hash.substr(1));
+		switch(param) {
+			case "personal_info":
 				myApp.displayPersonalInfo($maincont, candidate);
 				break;
-			case "academic":
+			case "academic_info":
 				myApp.displayAcademicInfo($maincont, candidate);
 				break;
-			case "professional":
+			case "professional_info":
 				myApp.displayProfesionalInfo($maincont, candidate);
 				break;
-			case "tech":
+			case "technical_skill_info":
 				myApp.displayTechnicalSkills($maincont, candidate);
 				break;
-			case "projects":
+			case "project_info":
 				myApp.displayProjects($maincont, candidate);
 				break;
-			case "hobbies":
+			case "hobbies_info":
 				myApp.displayHobbies($maincont, candidate);
+				break;
+			default:
+				myApp.displayPersonalInfo($maincont, candidate);
 				break;
 		}
 	});
 
-	// shows id info
+   	$(window).hashchange();
+
+	// always show id info
 	myApp.displayIdInfo($idcont, candidate);
-	// shows default content
-	myApp.displayPersonalInfo($maincont, candidate);
+
 
 	// print
 	$("#footer").click(function () {
