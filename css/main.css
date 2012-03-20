@@ -98,6 +98,10 @@ ul {
     text-decoration: none; }
     #menu a:hover {
       color: black; }
+    #menu a:active {
+      color: black; }
+    #menu a.current {
+      color: black; }
   @media screen and (max-width: 768px) {
     #menu {
       float: none;

@@ -115,7 +115,11 @@ ul {
 	a {
 		color: inherit; 
 		text-decoration: none;
-		&:hover {color: $strong_color;} } 
+		&:hover {color: $strong_color;} 
+		&:active {color: $strong_color;}
+		&.current {color: $strong_color;}
+
+	} 
 	@media screen and (max-width: 768px) {
 		float: none;
 		width: 100%;

@@ -41,11 +41,16 @@ $(document).ready(function(){
    	$maincont = $("#display_info");
    	$idcont = $("#id_info_cont");
    	
+   	
    	// mini-router to load content
    	// so it will maintain state on page reloads
 
 	$(window).hashchange( function(){
-		var param = (window.location.hash.substr(1));
+		var param, $menuitems;
+		
+		$menuitems = $("#menu a");
+		param = (window.location.hash.substr(1));
+		
 		switch(param) {
 			case "personal_info":
 				myApp.displayPersonalInfo($maincont, candidate);
@@ -69,13 +74,24 @@ $(document).ready(function(){
 				myApp.displayPersonalInfo($maincont, candidate);
 				break;
 		}
+		
+		// shows status in menu items
+		$menuitems.each(function () {
+   			var $item, id;
+   			$item = $(this)
+   			id = $item.attr("href").substr(1);
+   			if (id !== param) {
+   				$item.removeClass("current");
+   			} else {
+   				$item.addClass("current");
+   			}
+   		});
 	});
 
    	$(window).hashchange();
 
 	// always show id info
 	myApp.displayIdInfo($idcont, candidate);
-
 
 	// print
 	$("#footer").click(function () {
