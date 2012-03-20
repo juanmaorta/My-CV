@@ -66,6 +66,15 @@ mycv =
 	]
 
 	professional_experience: [
+		period: "2000 - present"
+		company: "Ameba Interactiva SL"
+		position: "Co-founder and CTO"
+		description: "Ameba Interactiva it's the company behind Fotonatura.org, the main Spanish online community of nature photography."
+		duties: "Here I'm also part of the company's administrative board, so I take part in commercial and
+		strategical decisions. My other responsilibies include analysis, design and development of the application (back and front-end), system and database administrator and coordination with the freelance developpers."
+		tech: "The website is in its 5th version, now with an enriched Ajax UI in most of the pages and extensive jQuery use. I'm rewritting the private backoffice as a 'single page app' using Backbone and jQuery."
+		url: "http://www.fotonatura.org"
+	,
 		period: "2005 - present"
 		company: "Portafolionline.com"
 		position: "Founder and main developper"
@@ -84,14 +93,6 @@ mycv =
 		duties: "My resposabilities here are mainly technical: analysis, design and development of front and backend apps, sysadmin of the server farm (now in 
 			collaboration with an external firm) and coordination with freelance designers and developpers."
 		url: "http://www.yobalia.com"
-	,
-		period: "2000 - present"
-		company: "Ameba Interactiva SL"
-		position: "Co-founder and CTO"
-		description: "Ameba Interactiva it's the company behind Fotonatura.org, the main Spanish online community of nature photography."
-		duties: "Here I'm also part of the company's administrative board, so I take part in commercial and
-		strategical decisions. My other responsilibies include analysis, design and development of the application (back and front-end), system and database administrator and coordination with the freelance developpers."
-		url: "http://www.fotonatura.org"
 	,
 		period : "2000 - present"
 		company: "Freelance"

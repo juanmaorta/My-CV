@@ -74,7 +74,7 @@ $(document).ready(function(){
 				myApp.displayPersonalInfo($maincont, candidate);
 				break;
 		}
-		
+
 		// shows status in menu items
 		$menuitems.each(function () {
    			var $item, id;
@@ -173,6 +173,7 @@ $(document).ready(function(){
 			<p>{{period}}</p>
 			{{#description}}<p>{{description}}</p>{{/description}}
 			{{#duties}}<p>{{duties}}</p>{{/duties}}
+			{{#tech}}<p>{{tech}}</p>{{/tech}}
 			{{#url}}<a href="{{url}}" target="_blank">{{url}}</a>{{/url}}
 		</li>
 		{{/prof_experience}}

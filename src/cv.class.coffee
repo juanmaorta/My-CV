@@ -200,6 +200,7 @@ class Experience
 	company = ''
 	description = ''
 	duties = ''
+	tech = ''
 	url = ''
 
 	constructor: (obj) ->
@@ -208,6 +209,7 @@ class Experience
 		@company = obj.company
 		@description = obj.description
 		@duties = obj.duties
+		@tech = obj.tech
 		@url = obj.url
 
 class Project
